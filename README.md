@@ -10,7 +10,7 @@ It creates 9 folders and 4 files, all under your main project folder and also in
         2. models.py
 
     2. A log folder where you can store all your logs
-    
+
     3. A static folder where your css, scripts and all static file can be stored and under the static folder, we have 3 folders 
         1. data
         2. style
@@ -26,5 +26,5 @@ It creates 9 folders and 4 files, all under your main project folder and also in
 To run the script:
 python3 createFlaskAppEnv.py
 
-This will prompt you to enter the of your application which it will in turn set as the main folder name
+This will prompt you to enter the of your application name which it will in turn set as the main folder name
     
