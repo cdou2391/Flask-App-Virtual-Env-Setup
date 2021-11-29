@@ -5,7 +5,7 @@ import subprocess
 
 try:
     # folders and file creation
-    parentFolderName = input("Enter project name : ")
+    parentFolderName = input("Enter application name : ")
     if not os.path.exists(parentFolderName):
         os.makedirs(parentFolderName)
         if os.path.exists(parentFolderName):
