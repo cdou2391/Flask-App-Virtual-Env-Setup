@@ -27,9 +27,12 @@ try:
             fp.close()
     
         # package installation
-        subprocess.call('cd ' + parentFolderName, shell=True)
-        subprocess.check_call([sys.executable, '-m', 'venv', 'virtual'])
-        subprocess.check_call([sys.executable, '-m', 'pip', 'install','flask'])
+        p1=subprocess.call('cd ' + str(parentFolderName), shell=True)
+        if p1 == 0:
+            subprocess.check_call([sys.executable, '-m', 'venv', 'virtual'])
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install','flask'])
+        else:
+            print("Could not change directory! No python modules were installed!")
 
 
 except NameError as error:
