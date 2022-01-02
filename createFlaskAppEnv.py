@@ -18,7 +18,7 @@ try:
                 os.makedirs(parentFolderName+"/static/style")
 
             if os.path.exists (parentFolderName+"/template"):
-                fp = open(parentFolderName+"/template/login.html", 'w')
+                fp = open(parentFolderName+"/template/base.html", 'w')
                 fp = open(parentFolderName+"/template/home.html", 'w')
                 fp.close()
 
@@ -28,8 +28,14 @@ try:
     
         # package installation
         wd = os.getcwd()
+        print(wd)
         os.chdir(str(parentFolderName))
+        wd = os.getcwd()
+        print(wd)
         subprocess.check_call([sys.executable, '-m', 'venv', 'virtual'])
+        proc = subprocess.Popen([".", "virtual/bin/activate"], stdout=subprocess.PIPE, shell=True)
+        output=subprocess.check_output(". virtual/bin/activate", shell=True)
+        print(output)
         subprocess.check_call([sys.executable, '-m', 'pip', 'install','flask'])
 
 

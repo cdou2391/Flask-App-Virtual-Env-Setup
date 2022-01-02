@@ -21,10 +21,11 @@ It creates 9 folders and 4 files, all under your main project folder and also in
         2. base.html
 
     5. Install the venv python package
-    6. Install the flask python package
 
 To run the script:
 python3 createFlaskAppEnv.py
 
 This will prompt you to enter the of your application name which it will in turn set as the main folder name
+
+To activate the virutal environment just run in command: ". virtual/bin/activate"
     
